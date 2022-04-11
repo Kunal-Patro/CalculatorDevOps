@@ -1,0 +1,2 @@
+[ubuntu18Server]
+172.16.135.1 ansible_user=joru

@@ -1,0 +1,8 @@
+---
+- name: Pull docker image of Calc
+  hosts: all
+  tasks:
+    - name: Pull image
+      docker_image:
+        name: patro30/calculator-devops
+        source: pull

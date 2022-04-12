@@ -45,6 +45,16 @@ public class Calculator {
                     System.out.println("\n");
                     break;
 
+                case 3:
+                    // find power
+                    System.out.print("Enter the first number : ");
+                    num1 = scn.nextDouble();
+                    System.out.print("Enter the second number : ");
+                    num2 = scn.nextDouble();
+                    System.out.println(num1+ " raised to power "+num2+" is : " + cal.power(num1, num2));
+                    System.out.println("\n");
+                    break;
+
                 default:
                     System.out.println("Exiting.....");
                     return;
@@ -62,6 +72,12 @@ public class Calculator {
         double result = Math.sqrt(number1);
         return result;
     }
+
+    public double power(double number1, double number2) {
+        double result = Math.pow(number1,number2);
+        return result;
+    }
+
 
     public double fact(double num)
     {

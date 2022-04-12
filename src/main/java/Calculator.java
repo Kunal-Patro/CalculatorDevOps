@@ -37,6 +37,14 @@ public class Calculator {
                     System.out.println("\n");
                     break;
 
+                case 2:
+                    // find square root
+                    System.out.print("Enter a number : ");
+                    num1 = scn.nextDouble();
+                    System.out.println("Square root of "+num1+" is : " + cal.sqroot(num1));
+                    System.out.println("\n");
+                    break;
+
                 default:
                     System.out.println("Exiting.....");
                     return;
@@ -47,6 +55,11 @@ public class Calculator {
     public double factorial(double num1)
     {
         double result = fact(num1);
+        return result;
+    }
+
+    public double sqroot(double number1) {
+        double result = Math.sqrt(number1);
         return result;
     }
 

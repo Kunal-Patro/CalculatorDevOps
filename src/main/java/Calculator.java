@@ -1,7 +1,11 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Calculator {
+    private static final Logger logger = LogManager.getLogger(Calculator.class);
     public Calculator()
     {
 
@@ -72,34 +76,42 @@ public class Calculator {
 
     public double factorial(double num1)
     {
+        logger.info("[Factorial] - " + num1);
         double result = fact(num1);
+        logger.info("[RESULT - FACTORIAL] - " + result);
         return result;
     }
 
-    public double sqroot(double number1) {
-        double result = Math.sqrt(number1);
+    public double sqroot(double num1) {
+        logger.info("[SQUARE ROOT] - " + num1);
+        double result = Math.sqrt(num1);
+        logger.info("[RESULT - SQ ROOT] - " + result);
         return result;
     }
 
-    public double power(double number1, double number2) {
-        double result = Math.pow(number1,number2);
+    public double power(double num1, double num2) {
+        logger.info("[POWER - " + num1 + " RAISED TO] " + num2);
+        double result = Math.pow(num1,num2);
+        logger.info("[RESULT - POWER] - " + result);
         return result;
     }
 
-    public double naturalLog(double number1) {
+    public double naturalLog(double num1) {
+        logger.info("[NATURAL LOG] - " + num1);
         double result = 0;
         try {
 
-            if (number1 <0 ) {
+            if (num1 <0 ) {
                 result = Double.NaN;
                 throw new ArithmeticException("Case of NaN 0.0/0.0");
             }
             else {
-                result = Math.log(number1);
+                result = Math.log(num1);
             }
         } catch (ArithmeticException error) {
             System.out.println("[EXCEPTION - LOG] - Cannot find log of negative numbers " + error.getLocalizedMessage());
         }
+        logger.info("[RESULT - NATURAL LOG] - " + result);
         return result;
     }
 

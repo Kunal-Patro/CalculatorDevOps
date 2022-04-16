@@ -6,4 +6,5 @@
       docker_image:
         name: patro30/calculator-devops
         source: pull
-        pull: yes
+        state: absent
+        force: yes

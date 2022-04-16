@@ -65,7 +65,7 @@ public class Calculator {
                     break;
 
                 default:
-                    System.out.println("Exiting.....");
+                    System.out.println("Khatam Tata Goodbye.....");
                     return;
             }
         }

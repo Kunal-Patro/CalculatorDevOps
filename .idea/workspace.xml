@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8816132b-c31b-48ed-bf60-fdbf8f541d1d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/docker-deployment/calc-playbook.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-deployment/calc-playbook.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JenkinsPipeline" beforeDir="false" afterPath="$PROJECT_DIR$/JenkinsPipeline" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +61,7 @@
       <workItem from="1649784981843" duration="4548000" />
       <workItem from="1649843479685" duration="356000" />
       <workItem from="1649843871235" duration="126000" />
-      <workItem from="1650127662289" duration="3643000" />
+      <workItem from="1650127662289" duration="3710000" />
     </task>
     <servers />
   </component>

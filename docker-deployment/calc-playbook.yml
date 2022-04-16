@@ -5,5 +5,5 @@
     - name: Pull image
       docker_image:
         name: patro30/calculator-devops
-        pull: "{{upgrade_calcApp | default(false) | bool)}}"
+        pull: true
         source: pull

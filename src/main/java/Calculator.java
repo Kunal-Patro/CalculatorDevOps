@@ -19,9 +19,9 @@ public class Calculator {
         {
             System.out.println("-----Calculator---DevOps-----");
             System.out.println("     Choose to perform operations");
-            System.out.println("1. To find factorial");
+            System.out.println("1. To find power");
             System.out.println("2. To find square root");
-            System.out.println("3. To find power");
+            System.out.println("3. To find factorial");
             System.out.println("4. To find natural Logarithm");
             System.out.println("5. To exit");
             int ch;
@@ -35,9 +35,11 @@ public class Calculator {
             switch (ch)
             {
                 case 1:
-                    System.out.print("Enter a number; ");
+                    System.out.print("Enter the first number : ");
                     num1 = scn.nextDouble();
-                    System.out.println("Factorial of " + num1 + " is : " + cal.factorial(num1));
+                    System.out.print("Enter the second number : ");
+                    num2 = scn.nextDouble();
+                    System.out.println(num1+ " raised to power "+num2+" is : " + cal.power(num1, num2));
                     System.out.println("\n");
                     break;
 
@@ -49,11 +51,9 @@ public class Calculator {
                     break;
 
                 case 3:
-                    System.out.print("Enter the first number : ");
+                    System.out.print("Enter a number; ");
                     num1 = scn.nextDouble();
-                    System.out.print("Enter the second number : ");
-                    num2 = scn.nextDouble();
-                    System.out.println(num1+ " raised to power "+num2+" is : " + cal.power(num1, num2));
+                    System.out.println("Factorial of " + num1 + " is : " + cal.factorial(num1));
                     System.out.println("\n");
                     break;
 

@@ -42,7 +42,6 @@ public class Calculator {
                     break;
 
                 case 2:
-                    // find square root
                     System.out.print("Enter a number : ");
                     num1 = scn.nextDouble();
                     System.out.println("Square root of "+num1+" is : " + cal.sqroot(num1));
@@ -50,7 +49,6 @@ public class Calculator {
                     break;
 
                 case 3:
-                    // find power
                     System.out.print("Enter the first number : ");
                     num1 = scn.nextDouble();
                     System.out.print("Enter the second number : ");
@@ -60,7 +58,6 @@ public class Calculator {
                     break;
 
                 case 4:
-                    // find natural log
                     System.out.print("Enter a number : ");
                     num1 = scn.nextDouble();
                     System.out.println("Natural log of "+num1+" is : " + cal.naturalLog(num1));

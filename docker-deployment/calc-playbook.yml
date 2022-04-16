@@ -2,9 +2,11 @@
 - name: Pull docker image of Calc
   hosts: all
   tasks:
-    - name: Pull image
+    - name: Remove image
       docker_image:
         name: patro30/calculator-devops
-        source: pull
         state: absent
         force: yes
+    - name: Pull new image
+      docker_image:
+        name: patro30/calculator-devops

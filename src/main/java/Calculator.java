@@ -23,7 +23,10 @@ public class Calculator {
             System.out.println("2. To find square root");
             System.out.println("3. To find factorial");
             System.out.println("4. To find natural Logarithm");
-            System.out.println("5. To exit");
+            System.out.println("5. To find sine of an angle in degrees");
+            System.out.println("6. To find cosine of an angle in degrees");
+            System.out.println("7. To find tan of an angle in degrees");
+            System.out.println("8. To exit");
             int ch;
             try{
                 ch = scn.nextInt();
@@ -64,6 +67,27 @@ public class Calculator {
                     System.out.println("\n");
                     break;
 
+                case 5:
+                    System.out.print("Enter an angle(degrees) : ");
+                    num1 = scn.nextDouble();
+                    System.out.println("Sine of "+num1+" is : " + cal.sin(num1));
+                    System.out.println("\n");
+                    break;
+
+                case 6:
+                    System.out.print("Enter an angle(degrees) : ");
+                    num1 = scn.nextDouble();
+                    System.out.println("Cosine of "+num1+" is : " + cal.cos(num1));
+                    System.out.println("\n");
+                    break;
+
+                case 7:
+                    System.out.print("Enter an angle(degrees) : ");
+                    num1 = scn.nextDouble();
+                    System.out.println("Tan of "+num1+" is : " + cal.tan(num1));
+                    System.out.println("\n");
+                    break;
+
                 default:
                     System.out.println("Khatam Tata Goodbye.....");
                     return;
@@ -71,16 +95,55 @@ public class Calculator {
         }
     }
 
-    public double addition(double num1, double num2)
+    public double sin(double num1)
     {
-        logger.info("[Addition of " + num1 + " and " + num2 );
-        double result = num1 + num2;
+        logger.info("[SIN] - " + num1);
+        num1 = Math.toRadians(num1);
+        double result = Math.sin(num1);
+        logger.info("[RESULT - SIN] - " + result);
+        return result;
+    }
+
+    public double cos(double num1)
+    {
+        logger.info("[COS] - " + num1);
+        num1 = Math.toRadians(num1);
+        double result = Math.cos(num1);
+        logger.info("[RESULT - COS] - " + result);
+        return result;
+    }
+
+    public double tan(double num1)
+    {
+        logger.info("[TAN] - " + num1);
+        double result = 0;
+        try{
+            if(num1 % 180 == 90)
+            {
+                result = Double.POSITIVE_INFINITY;
+                throw new ArithmeticException("Case of Positive infinity 1.0/0.0");
+            }
+            else if(num1 % 180 == -90)
+            {
+                result = Double.NEGATIVE_INFINITY;
+                throw new ArithmeticException("Case of Negative infinity -1.0/0.0");
+            }
+            else
+            {
+                num1 = Math.toRadians(num1);
+                result = Math.tan(num1);
+            }
+        }catch(ArithmeticException err)
+        {
+            System.out.println("[EXCEPTION - TAN] - UNDEFINED " + err.getLocalizedMessage());
+        }
+        logger.info("[RESULT - TAN] - " + result);
         return result;
     }
 
     public double factorial(double num1)
     {
-        logger.info("[Factorial] - " + num1);
+        logger.info("[FACTORIAL] - " + num1);
         double result = fact(num1);
         logger.info("[RESULT - FACTORIAL] - " + result);
         return result;

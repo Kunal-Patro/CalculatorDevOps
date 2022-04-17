@@ -71,6 +71,13 @@ public class Calculator {
         }
     }
 
+    public double addition(double num1, double num2)
+    {
+        logger.info("[Addition of " + num1 + " and " + num2 );
+        double result = num1 + num2;
+        return result;
+    }
+
     public double factorial(double num1)
     {
         logger.info("[Factorial] - " + num1);
